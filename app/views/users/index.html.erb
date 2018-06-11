@@ -1,12 +1,16 @@
+<% if admin_session %>
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
-
+<% if @users == nil %>
+<h3>No Users Yet</h3>
+<% else %>
 <table>
   <thead>
     <tr>
       <th>First name</th>
       <th>Last name</th>
+      <th>Email</th>
       <th>Birthday</th>
       <th colspan="3"></th>
     </tr>
@@ -15,17 +19,19 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.birthday %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= user.name_first %></td>
+        <td><%= user.name_last %></td>
+        <td><%= user.email %></td>
+        <td><%= user.dob %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+<% end %>
 <br>
 
 <%= link_to 'New User', new_user_path %>
+
+<% else %>
+<h1>About Us</h1>
+<% end %>

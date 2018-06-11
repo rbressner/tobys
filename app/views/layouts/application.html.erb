@@ -14,14 +14,24 @@
     <p class="alert"><%= alert %></p>
 
     <nav>
+      <ul>
       <% if admin_session %>
-      <%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %>
+      <li><%= link_to 'Users', users_path %></li>
+      <li><%= link_to 'New Post', new_post_path %></li>
+      <li><%= link_to 'Manage Posts', posts_path %></li>
+      <li><%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %></li>
       <% elsif user_session %>
-      <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+      <li><%= link_to 'Home', users_path %></li>
+      <li><%= link_to 'Adopt', new_admin_session_path %></li>
+      <li><%= link_to 'Matz Up Blog', posts_path %></li>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
       <% else %>
-      <%= link_to 'Admin Sign In', new_admin_session_path %>
-      <%= link_to 'User Sign In', new_user_session_path %>
+      <li><%= link_to 'Home', users_path %></li>
+      <li><%= link_to 'Adopt', new_admin_session_path %></li>
+      <li><%= link_to 'Admin Sign In', new_admin_session_path %></li>
+      <li><%= link_to 'User Sign In', new_user_session_path %></li>
       <% end %>
+    </ul>
     </nav>
 
     <%= yield %>
