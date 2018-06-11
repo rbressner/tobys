@@ -16,8 +16,11 @@
     <nav>
       <% if admin_session %>
       <%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %>
+      <% elsif user_session %>
+      <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
       <% else %>
-      <%= link_to 'Sign In', new_admin_session_path %>
+      <%= link_to 'Admin Sign In', new_admin_session_path %>
+      <%= link_to 'User Sign In', new_user_session_path %>
       <% end %>
     </nav>
 
