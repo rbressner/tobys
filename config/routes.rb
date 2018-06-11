@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'charges/new'
+  get 'charges/create'
+  root 'products#index'
+  resources :products
   devise_for :users
   resources :users
-  root 'posts#index'
   devise_for :admins
   resources :posts
   resources :admins

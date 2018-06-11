@@ -19,14 +19,16 @@
       <li><%= link_to 'Users', users_path %></li>
       <li><%= link_to 'New Post', new_post_path %></li>
       <li><%= link_to 'Manage Posts', posts_path %></li>
+      <li><%= link_to 'Products', products_path %></li>
       <li><%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %></li>
       <% elsif user_session %>
-      <li><%= link_to 'Home', users_path %></li>
-      <li><%= link_to 'Adopt', new_admin_session_path %></li>
+      <li><%= link_to 'Home', products_path %></li>
+      <li><%= link_to 'Adopt', products_path %></li>
       <li><%= link_to 'Matz Up Blog', posts_path %></li>
+      <li><%= link_to 'Settings', current_user %></li>
       <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
       <% else %>
-      <li><%= link_to 'Home', users_path %></li>
+      <li><%= link_to 'Home', products_path %></li>
       <li><%= link_to 'Adopt', new_admin_session_path %></li>
       <li><%= link_to 'Admin Sign In', new_admin_session_path %></li>
       <li><%= link_to 'User Sign In', new_user_session_path %></li>
