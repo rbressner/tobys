@@ -18,22 +18,25 @@
   <nav>
     <ul>
       <% if admin_session %>
-      <li><strong><%= link_to 'Users', users_path %><%= image_tag('ball.png') %></strong></li>
-      <li><strong><%= link_to 'New Post', new_post_path %><%= image_tag('ball.png') %></li>
-        <li><strong><%= link_to 'Manage Posts', posts_path %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Products', products_path %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %><%= image_tag('ball.png') %></strong></li>
+      <li><%= image_tag('ball.png') %><strong><%= link_to 'Users', users_path %></strong></li>
+      <li><%= image_tag('ball.png') %><strong><%= link_to 'About Us', welcome_home_path %></strong></li>
+      <li><%= image_tag('ball.png') %><strong><%= link_to 'New Post', new_post_path %></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Manage Posts', posts_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Products', products_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %></strong></li>
         <% elsif user_session %>
-        <li><strong><%= link_to 'Home', welcome_index_path %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Adopt', products_path %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Matz Up Blog', posts_path %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Settings', current_user %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %><%= image_tag('ball.png') %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Home', welcome_index_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'About Us', welcome_home_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Adopt', products_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Matz Up Blog', posts_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Settings', current_user %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></strong></li>
         <% else %>
-        <li><strong><%= link_to 'Home', welcome_index_path %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Adopt', products_path %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Matz Up Blog', posts_path %><%= image_tag('ball.png') %></strong></li>
-        <li><strong><%= link_to 'Sign In/Sign Up', new_user_session_path %><%= image_tag('ball.png') %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Home', welcome_index_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'About Us', welcome_home_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Adopt', products_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Matz Up Blog', posts_path %></strong></li>
+        <li><%= image_tag('ball.png') %><strong><%= link_to 'Sign In/Sign Up', new_user_session_path %></strong></li>
         <% end %>
       </ul>
     </nav>

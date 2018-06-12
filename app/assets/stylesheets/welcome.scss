@@ -19,7 +19,7 @@ img {
   font-family: $varela;
   padding: 3%;
   text-align: center;
-  max-width: 50%;
+  // width: 50%;
   display: flex;
   flex-flow: column;
   font-size: 150%;
@@ -40,6 +40,7 @@ nav {
   z-index: 100000;
   display: block;
   width: 30%;
+  margin-left: -2%;
   li {
     list-style-type: none;
     font-size: 160%;
@@ -52,14 +53,14 @@ nav {
   }
   img {
   visibility: hidden;
-  padding-left: 1%;
+  padding-right: 1%;
 }
   li:hover {
     color: orange;
     background-color: transparent;
     img {
       visibility: visible;
-      padding-left: 2%;
+      padding-right: 2%;
     }
     a:hover {
       background-color: transparent;
