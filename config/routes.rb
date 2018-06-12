@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'welcome/home'
+  get 'welcome/index'
   get 'charges/new'
   get 'charges/create'
-  root 'products#index'
+  root 'welcome#index'
   resources :products
   devise_for :users
   resources :users

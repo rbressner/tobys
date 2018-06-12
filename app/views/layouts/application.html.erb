@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Tobys</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Tobys</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="icon" href="<%=image_url('logo.png')%>" type="image" sizes="16x16">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Varela+Round" rel="stylesheet">
+</head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-    <nav>
-      <ul>
+  <nav>
+    <ul>
       <% if admin_session %>
-      <li><%= link_to 'Users', users_path %></li>
-      <li><%= link_to 'New Post', new_post_path %></li>
-      <li><%= link_to 'Manage Posts', posts_path %></li>
-      <li><%= link_to 'Products', products_path %></li>
-      <li><%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %></li>
-      <% elsif user_session %>
-      <li><%= link_to 'Home', products_path %></li>
-      <li><%= link_to 'Adopt', products_path %></li>
-      <li><%= link_to 'Matz Up Blog', posts_path %></li>
-      <li><%= link_to 'Settings', current_user %></li>
-      <li><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
-      <% else %>
-      <li><%= link_to 'Home', products_path %></li>
-      <li><%= link_to 'Adopt', new_admin_session_path %></li>
-      <li><%= link_to 'Admin Sign In', new_admin_session_path %></li>
-      <li><%= link_to 'User Sign In', new_user_session_path %></li>
-      <% end %>
-    </ul>
+      <li><strong><%= link_to 'Users', users_path %><%= image_tag('ball.png') %></strong></li>
+      <li><strong><%= link_to 'New Post', new_post_path %><%= image_tag('ball.png') %></li>
+        <li><strong><%= link_to 'Manage Posts', posts_path %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Products', products_path %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Sign Out', destroy_admin_session_path, :method => :delete %><%= image_tag('ball.png') %></strong></li>
+        <% elsif user_session %>
+        <li><strong><%= link_to 'Home', welcome_index_path %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Adopt', products_path %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Matz Up Blog', posts_path %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Settings', current_user %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %><%= image_tag('ball.png') %></strong></li>
+        <% else %>
+        <li><strong><%= link_to 'Home', welcome_index_path %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Adopt', products_path %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Matz Up Blog', posts_path %><%= image_tag('ball.png') %></strong></li>
+        <li><strong><%= link_to 'Sign In/Sign Up', new_user_session_path %><%= image_tag('ball.png') %></strong></li>
+        <% end %>
+      </ul>
     </nav>
-
+    <!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
     <%= yield %>
   </body>
-</html>
+  </html>
