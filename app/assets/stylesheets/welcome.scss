@@ -2,7 +2,7 @@ $varela: 'Varela Round', sans-serif;
 $raleway: 'Raleway', sans-serif;
 $montserrat: 'Montserrat', sans-serif;
 body {
-  background-image: url('marble.jpg');
+  background-image: image-url('marble.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
@@ -41,14 +41,15 @@ nav {
   display: block;
   width: 30%;
   margin-left: -2%;
+  color: black;
   li {
     list-style-type: none;
     font-size: 160%;
     padding-bottom: 5%;
-    color: white;
     a {
       text-decoration: none;
       font-family: $varela;
+      color: black;
     }
   }
   img {
@@ -66,6 +67,9 @@ nav {
       background-color: transparent;
       color: orange;
     }
+  }
+  a:visited {
+    color: black;
   }
 }
 .post-show {
