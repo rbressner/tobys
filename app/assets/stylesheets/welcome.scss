@@ -6,9 +6,13 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+.yield {
+  width: 88%;
+  margin-left: 12%;
+  margin-top: -25%;
+}
 .home{
 display: flex;
-align-items: center;
 justify-content: center;
 img {
   padding-bottom: 30%;
@@ -42,6 +46,7 @@ nav {
   width: 30%;
   margin-left: -2%;
   color: black;
+  margin-top: 15%;
   li {
     list-style-type: none;
     font-size: 160%;
@@ -85,7 +90,8 @@ nav {
        border: 0.5px dotted black;
        border-radius: 5px;
        width: 50%;
-       text-align: center;
+       padding-left: 4%;
+       padding-right: 4%;
        a {
          text-decoration: none;
          color: black;
@@ -106,6 +112,7 @@ nav {
          font-size: 130%;
        }
   }
+
   h1 {
     text-align: center;
     font-family: $varela;
@@ -124,6 +131,8 @@ nav {
      color: black;
      border: 0.5px dotted black;
      border-radius: 5px;
+     padding-left: 4%;
+     padding-right: 4%;
      a {
        text-decoration: none;
        color: black;
@@ -177,5 +186,14 @@ h1 {
   .column {
     flex: 100%;
     max-width: 100%;
+  }
+}
+.about {
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+  a:hover {
+    background-color: #f2f2f2;
   }
 }
