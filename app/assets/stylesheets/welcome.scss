@@ -7,29 +7,6 @@ body {
   background-size: cover;
   background-color: black;
 }
-//
-// .soupvid {
-//   width: 75%;
-//   margin-top: 0;
-//   margin-left: 12%;
-// }
-// .parallax {
-//     background-image: url("metal.jpg");
-//     min-height: 1000px;
-//     background-attachment: fixed;
-//     background-position: center;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-// }
-// nav {
-//   text-align: center;
-//   background-color: black;
-//
-//   li {
-//     display: inline-block;
-//     text-align: center;
-//   }
-// }
 .yield {
   width: 88%;
   margin-left: 12%;
@@ -45,6 +22,13 @@ body {
   text-align: center;
 }
 .checkout {
+  h2 {
+    text-align: center;
+    font-family: $montserrat;
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 2%;
+  }
   * {
   box-sizing: border-box;
 }
@@ -361,5 +345,15 @@ h1 {
   }
   a:hover {
     background-color: #f2f2f2;
+  }
+}
+.confirm {
+  text-align: center;
+  h2 {
+    padding: 2%;
+    font-family: $montserrat;
+  }
+  h3 {
+    font-family: $montserrat;
   }
 }
